@@ -3,6 +3,13 @@
 
 var fs = require("fs");
 var mustache = require("./lib/mustache.js");
+var file = require("./lib/file.js");
+
+var ROOT = __dirname + "/..";
+var WEBSITE_ROOT = ROOT + "/websites";
+
+var websites = fs.readdirSync(WEBSITE_ROOT);
+console.log(websites);
 
 var view = {
     "articles": [
