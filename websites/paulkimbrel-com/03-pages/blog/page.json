@@ -1,0 +1,14 @@
+{
+    "model": {
+        "title": "This is the blog"
+    },
+    "manifest": [
+        {
+            "header": "/data/chrome/header"
+        },
+        {
+            "blog": "/data/content/blog"
+        }
+    ],
+    "template": "{{header}} {{blog}}"
+}

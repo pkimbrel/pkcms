@@ -14,6 +14,8 @@
     "grunt-ng-constant": "~1.0.0",
     "grunt-rsync": "~0.6.2",
     "grunt-scp": "~0.1.7",
-    "mu2": "^0.5.20"
+    "mu2": "^0.5.20",
+    "mustache": "^0.8.2",
+    "underscore": "^1.7.0"
   }
 }
