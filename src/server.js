@@ -1,17 +1,14 @@
-/*jslint nomen: true */
+/*jslint node: true,nomen: true */
 /*globals console,require,__dirname*/
 
-var _ = require('underscore');
-var mustache = require("mustache");
+"use strict";
+
 var file = require("./fileManager");
+var engine = require("./publishingEngine");
 
-var websites = file.getWebsites();
-
-var page = file.getPage("paulkimbrel-com", "/blog");
-var component = file.getComponent("paulkimbrel-com", "/content/blog");
-var componentTemplate = file.getComponentTemplate("paulkimbrel-com", component.template);
-
-var model = _.extend(page.model, component.model);
-
-
-console.log(mustache.render(componentTemplate, model));
+try {
+    var page = engine.renderPage("paulkimbrel-com", "/blog");
+    console.log(page);
+} catch (e) {
+    console.log(e.message);
+}

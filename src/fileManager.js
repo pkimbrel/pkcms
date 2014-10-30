@@ -42,3 +42,11 @@ exports.getPage = function (website, path) {
 
     return JSON.parse(returnValue);
 };
+
+exports.getPageTemplate = function (website, path) {
+    var returnValue = fs.readFileSync(WEBSITE_ROOT + "/" + website + "/01-design/page-templates" + path + ".html", {
+        "encoding": "utf8"
+    });
+
+    return returnValue;
+};
