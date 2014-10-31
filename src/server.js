@@ -11,5 +11,6 @@ try {
     //console.log(page);
     engine.renderWebsite("paulkimbrel-com");
 } catch (e) {
+    console.log("Error in operation '" + e.syscall + "'");
     console.log(e.message);
 }

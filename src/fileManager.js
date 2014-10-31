@@ -67,7 +67,24 @@ exports.getPageTemplate = function (website, path) {
     return returnValue;
 };
 
+exports.writePage = function (website, path, fileName, fileData) {
+    var newPath = PUB_ROOT + "/" + website + path;
+    if (!fs.existsSync(newPath)) {
+        fs.mkdirSync(newPath, "0755");
+    }
+    fs.writeFileSync(newPath + "/" + fileName, fileData, {
+        "encoding": "utf8",
+        "mode": "0644"
+    });
+};
+
 exports.cleanPublishFolder = function (website) {
-    fs.rmdirSync(PUB_ROOT + "/" + website);
-    fs.mkdirSync(PUB_ROOT + "/" + website, "0775");
+    var path = PUB_ROOT + "/" + website;
+    if (fs.existsSync(path)) {
+        fs.rmdirSync(PUB_ROOT + "/" + website);
+    }
+    if (!fs.existsSync(PUB_ROOT)) {
+        fs.mkdirSync(PUB_ROOT, "0755");
+    }
+    fs.mkdirSync(PUB_ROOT + "/" + website, "0755");
 };
