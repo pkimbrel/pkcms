@@ -14,7 +14,7 @@ function renderComponent(website, path, pageModel) {
     return mustache.render(componentTemplate, model);
 }
 
-exports.renderPage = function (website, path) {
+function renderPage(website, path) {
     var page = file.getPage(website, path),
         pageTemplate = file.getPageTemplate(website, page.template),
         key,
@@ -32,4 +32,21 @@ exports.renderPage = function (website, path) {
     finalMarkup = mustache.render(pageTemplate, pageModel);
 
     return finalMarkup;
+}
+
+function renderLevel(website, folder) {
+    console.log("Rendering: " + folder);
+
+    var childPages = file.getChildPages(website, folder);
+    childPages.forEach(function (child) {
+        renderLevel(website, folder + "/" + child);
+    });
+}
+
+exports.renderWebsite = function (website) {
+    renderLevel(website, "");
+};
+
+exports.renderPage = function (website, path) {
+    return renderPage(website, path);
 };

@@ -4,6 +4,7 @@
 "use strict";
 
 var fs = require("fs");
+var S = require('string');
 
 var FOLDER_ROOT = __dirname + "/..";
 var WEBSITE_ROOT = FOLDER_ROOT + "/websites";
@@ -12,8 +13,19 @@ exports.getWebsites = function () {
     var websites = fs.readdirSync(WEBSITE_ROOT),
         returnValue = [];
     websites.forEach(function (website) {
-        if (website.substr(0, 1) !== ".") {
+        if (!S(website).startsWith(".")) {
             returnValue.push(website);
+        }
+    });
+    return returnValue;
+};
+
+exports.getChildPages = function (website, path) {
+    var folders = fs.readdirSync(WEBSITE_ROOT + "/" + website + "/03-pages" + path),
+        returnValue = [];
+    folders.forEach(function (folder) {
+        if (!S(folder).startsWith(".") && !S(folder).endsWith(".json")) {
+            returnValue.push(folder);
         }
     });
     return returnValue;
