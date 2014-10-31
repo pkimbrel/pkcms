@@ -1,0 +1,10 @@
+{
+    "model": {
+        "title": "This is the photo page"
+    },
+    "manifest": {
+        "header": "/chrome/header",
+        "main": "/content/blog"
+    },
+    "template": "/standard"
+}

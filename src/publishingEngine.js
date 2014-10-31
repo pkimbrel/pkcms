@@ -36,6 +36,7 @@ function renderPage(website, path) {
 
 function renderLevel(website, folder) {
     console.log("Rendering: " + folder);
+    console.log(renderPage(website, folder));
 
     var childPages = file.getChildPages(website, folder);
     childPages.forEach(function (child) {

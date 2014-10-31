@@ -1,0 +1,10 @@
+{
+    "model": {
+        "title": "This is the music page"
+    },
+    "manifest": {
+        "header": "/chrome/header",
+        "main": "/content/blog"
+    },
+    "template": "/standard"
+}
