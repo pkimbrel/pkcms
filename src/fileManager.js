@@ -8,12 +8,14 @@ var S = require('string');
 
 var FOLDER_ROOT = __dirname + "/..";
 var WEBSITE_ROOT = FOLDER_ROOT + "/websites";
+var PUB_ROOT = FOLDER_ROOT + "/pub";
 
 exports.getWebsites = function () {
     var websites = fs.readdirSync(WEBSITE_ROOT),
         returnValue = [];
     websites.forEach(function (website) {
-        if (!S(website).startsWith(".")) {
+        var sWebsite = new S(website);
+        if (!sWebsite.startsWith(".")) {
             returnValue.push(website);
         }
     });
@@ -24,7 +26,9 @@ exports.getChildPages = function (website, path) {
     var folders = fs.readdirSync(WEBSITE_ROOT + "/" + website + "/03-pages" + path),
         returnValue = [];
     folders.forEach(function (folder) {
-        if (!S(folder).startsWith(".") && !S(folder).endsWith(".json")) {
+        var sFolder = new S(folder);
+
+        if (!sFolder.startsWith(".") && !sFolder.endsWith(".json")) {
             returnValue.push(folder);
         }
     });
@@ -61,4 +65,9 @@ exports.getPageTemplate = function (website, path) {
     });
 
     return returnValue;
+};
+
+exports.cleanPublishFolder = function (website) {
+    fs.rmdirSync(PUB_ROOT + "/" + website);
+    fs.mkdirSync(PUB_ROOT + "/" + website, "0775");
 };

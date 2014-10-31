@@ -45,6 +45,7 @@ function renderLevel(website, folder) {
 }
 
 exports.renderWebsite = function (website) {
+    file.cleanPublishFolder(website);
     renderLevel(website, "");
 };
 
