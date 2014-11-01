@@ -3,33 +3,16 @@
     "model": {
         "articles": [
             {
-                "title": "Entry #1",
-                "body": "This is the body of the first article"
-        },
-            {
-                "title": "Entry #2",
-                "body": "This is the body of the second article"
-        },
-            {
-                "title": "Entry #3",
-                "body": "This is the body of the third article"
-        },
-            {
-                "title": "Entry #4",
-                "body": "This is the body of the forth article"
-        },
-            {
-                "title": "Entry #5",
-                "body": "This is the body of the fifth article"
-        },
-            {
-                "title": "Entry #6",
-                "body": "This is the body of the sixth article"
-        },
-            {
-                "title": "Entry #7",
-                "body": "This is the body of the seventh article"
-        }
-    ]
+                "title": "A New Site",
+                "date": "2014-10-21",
+                "paragraphs": [
+                    "My previous site was terrible. It was to be a great experiment and technically - it worked. However, I never kept up with any new content and the theme was an abomination that made me embarrassed to call myself a web developer.",
+                    "Well, today I'm turning that around. I decided to develop a theme that follows my personal web design preferences. I've looked far and wide at many sites and decided what I hate the most - and I have NOT (okay tried not to) put those ideas in this design. In particular, I've decided to keep things pretty spaced out and sparse. My number one complaint of most sites is that they're packed to the brim with crap nobody cares about. It's all a distraction that keeps you from the main purpose of your visit to a site.",
+                    "Because let's face it - you're not here for the eye candy. In fact, I'm surprised you're even here. Chances are you're in Florida looking for a dentist. That's not me. That's the other guy. You're welcome.",
+                    "So here's the deal. This site will still be a place for exploration of new technologies and ideas. I shall implement all my crazy designs here before I implement them elsewhere. My first task to is stop doing what I'm doing right this moment - which is updating my website in a text editor. But all good things come with time. I'll update things as I get a better idea of the design and blog about the experience... assuming I don't bring my website down with those experiments.",
+                    "Should be fun!"
+                ]
+            }
+        ]
     }
 }

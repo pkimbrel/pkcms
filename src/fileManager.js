@@ -37,11 +37,11 @@ exports.getPageChildFolders = function (website, path) {
 
 exports.copyStaticContent = function (website) {
     var src = WEBSITE_ROOT + "/" + website + "/04-static",
-        dest = PUB_ROOT + "/" + website; 
+        dest = PUB_ROOT + "/" + website;
     
     fs.copySync(src, dest);
     
-    return
+    return;
 };
 
 exports.getComponent = function (website, path) {

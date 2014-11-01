@@ -1,0 +1,74 @@
+{
+    "template": "/sidebars/musicPlayer/script",
+    "model": {
+        "tracks": [
+            {
+                "title": "One Fine Day",
+                "artist": "Paul Kimbrel",
+                "mp3": "http://music.shadowcloset.com/PaulKimbrel/OneFineDay.mp3",
+                "ogg": "http://music.shadowcloset.com/PaulKimbrel/OneFineDay.ogg"
+            },
+            {
+                "title": "Beyond a Doubt",
+                "artist": "Paul Kimbrel",
+                "mp3": "http://music.shadowcloset.com/PaulKimbrel/02_Beyond_A_Doubt.mp3",
+                "ogg": "http://music.shadowcloset.com/PaulKimbrel/02_Beyond_A_Doubt.ogg"
+            },
+            {
+                "title": "Someone Special",
+                "artist": "Paul Kimbrel",
+                "mp3": "http://music.shadowcloset.com/PaulKimbrel/03_Someone_Special.mp3",
+                "ogg": "http://music.shadowcloset.com/PaulKimbrel/03_Someone_Special.ogg"
+            },
+            {
+                "title": "Where Are You Now",
+                "artist": "Paul Kimbrel",
+                "mp3": "http://music.shadowcloset.com/PaulKimbrel/04_Where_Are_You_Now.mp3",
+                "ogg": "http://music.shadowcloset.com/PaulKimbrel/04_Where_Are_You_Now.ogg"
+            },
+            {
+                "title": "One of These Days",
+                "artist": "Paul Kimbrel",
+                "mp3": "http://music.shadowcloset.com/PaulKimbrel/06_One_Of_These_Days.mp3",
+                "ogg": "http://music.shadowcloset.com/PaulKimbrel/06_One_Of_These_Days.ogg"
+            },
+            {
+                "title": "When Time Stood Still",
+                "artist": "Paul Kimbrel",
+                "mp3": "http://music.shadowcloset.com/PaulKimbrel/07_When_Time_Stood_Still.mp3",
+                "ogg": "http://music.shadowcloset.com/PaulKimbrel/07_When_Time_Stood_Still.ogg"
+            },
+            {
+                "title": "Someone Special (Reprise)",
+                "artist": "Paul Kimbrel",
+                "mp3": "http://music.shadowcloset.com/PaulKimbrel/08_Someone_Special_Reprise.mp3",
+                "ogg": "http://music.shadowcloset.com/PaulKimbrel/08_Someone_Special_Reprise.ogg"
+            },
+            {
+                "title": "All I Need",
+                "artist": "Paul Kimbrel",
+                "mp3": "http://music.shadowcloset.com/PaulKimbrel/09_All_I_Need.mp3",
+                "ogg": "http://music.shadowcloset.com/PaulKimbrel/09_All_I_Need.ogg"
+            },
+            {
+                "title": "Into the Waves",
+                "artist": "Paul Kimbrel",
+                "mp3": "http://music.shadowcloset.com/PaulKimbrel/PK_into_the_waves.mp3",
+                "ogg": "http://music.shadowcloset.com/PaulKimbrel/PK_into_the_waves.ogg"
+            },
+            {
+                "title": "Who Knows",
+                "artist": "Paul Kimbrel",
+                "mp3": "http://music.shadowcloset.com/PaulKimbrel/PK_who_knows_mixdown03.mp3",
+                "ogg": "http://music.shadowcloset.com/PaulKimbrel/PK_who_knows_mixdown03.ogg"
+            },
+            {
+                "title": "40 (Cover)",
+                "artist": "Steve Hampton and Paul Kimbrel",
+                "mp3": "http://music.shadowcloset.com/PaulKimbrel/40.mp3",
+                "ogg": "http://music.shadowcloset.com/PaulKimbrel/40.ogg",
+                "last": true
+            }
+        ]
+    }
+}

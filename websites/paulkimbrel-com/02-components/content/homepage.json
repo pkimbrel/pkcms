@@ -1,0 +1,15 @@
+{
+    "template": "/content/articles",
+    "model": {
+        "articles": [
+            {
+                "title": "About Me",
+                "paragraphs": [
+                    "I have over 15 years of professional experience in the areas of software application architecture, design and development. I also have over 20 years of experience in computer science. I have been a computer programmer, enthusiast, and evangelist for most of my life and I continue to look for ways to expand my skills and find ways of using technology to make life a little easier for everyone.",
+                    "I'm also very happily married and have three amazing children. Fortunately, my boys have shown interest in many of the same interests that I've had over the years which makes our home a very interesting place. My wife and I (mostly my wife) homeschool our boys and it's fun to watch them as they grow and learn.",
+                    "My hobbies are plentiful and it seems I'm always either planning or executing some crazy project. I am doing, have done, or WILL BE doing:<ul><li>Web Development (it's not just a career)</li><li>Ham Radio (<a href=\"http://qrz.com/db/kc9jer\">KC9JER</a>)</li><li>Music (studio engineering, guitar, vocals, sequencing)</li><li>Electronic Engi*cough* Tinkering</li><li>Legacy Programming (keeping history alive)</li><li>Photography</li></ul>"
+                ]
+            }
+        ]
+    }
+}

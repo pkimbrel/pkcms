@@ -6,6 +6,7 @@
 var _ = require("underscore");
 var mustache = require("mustache");
 var file = require("./fileManager");
+var moment = require('moment');
 
 function renderComponent(website, path, pageModel) {
     var component = file.getComponent(website, path),
@@ -21,6 +22,13 @@ function renderPage(website, path) {
         component,
         finalMarkup = "",
         pageModel = page.model;
+
+    page.model.year = new Date().getFullYear();
+    page.model.formatDateHuman = function () {
+        return function (text, render) {
+            return moment(render(text)).format("MMM DD, YYYY");
+        };
+    };
 
     for (key in page.manifest) {
         if (page.manifest.hasOwnProperty(key)) {

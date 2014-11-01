@@ -1,4 +1,15 @@
 {{#articles}}
-<h2>{{title}}</h2>
-<p>{{body}}</p>
+<article>
+    <header>
+        <h2 {{#date}}class="withDate"{{/date}}>{{title}}</h2>
+        {{#date}}
+        <p>
+            <time pubdate datetime="{{date}}">{{#formatDateHuman}}{{date}}{{/formatDateHuman}}</time>
+        </p>
+        {{/date}}
+    </header>
+    {{#paragraphs}}
+    <p>{{&.}}</p>
+    {{/paragraphs}}
+</article>
 {{/articles}}

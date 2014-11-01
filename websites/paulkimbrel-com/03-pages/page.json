@@ -1,10 +1,13 @@
 {
     "model": {
-        "title": "This is the homepage"
+        "title": "Paul Kimbrel - Web Developer, Technical Architect",
+        "nav-home": true
     },
     "manifest": {
         "header": "/chrome/header",
-        "main": "/content/blog"
+        "footer": "/chrome/footer",
+        "main": "/content/homepage",
+        "sidebar": "/sidebars/twitter"
     },
     "template": "/standard"
 }

@@ -1,10 +1,13 @@
 {
     "model": {
-        "title": "This is the blog"
+        "title": "Paul Kimbrel - Blah Blah Blog",
+        "nav-blog": true
     },
     "manifest": {
         "header": "/chrome/header",
-        "main": "/content/blog"
+        "footer": "/chrome/footer",
+        "main": "/content/blog",
+        "sidebar": "/sidebars/twitter"
     },
     "template": "/standard"
 }

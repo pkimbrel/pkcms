@@ -1,16 +1,47 @@
-<html>
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
 
 <head>
     <title>{{title}}</title>
-    <link href="css/pkweb.min.css" rel='stylesheet' type='text/css'>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Paul Kimbrel">
+    <meta name="description" content="Social media hub for Paul Kimbrel, Web Developer and Systems Architect.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <link href="/css/pkweb.min.css" rel='stylesheet' type='text/css'>
+
+    {{#extraCSS}} {{&extraCSS}} {{/extraCSS}}
 
     <link href='http://fonts.googleapis.com/css?family=Exo+2' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
-    {{&header}} {{&main}}
-    <script src="js/pkweb.min.js" type="text/javascript"></script>
+    {{&header}}
+
+    <div class="container main-section">
+        <div class="row">
+            <div class="col-sm-8 level-one">
+                {{&main}}
+            </div>
+            <div class="col-sm-4 level-two">
+                {{&sidebar}}
+            </div>
+        </div>
+    </div>
+
+    {{&footer}}
+
+    <script src="/js/pkweb.min.js" type="text/javascript"></script>
+    {{#extraJS}} {{&extraJS}} {{/extraJS}}
 
 </body>
 

@@ -1,0 +1,27 @@
+<script src="/audio/jquery.jplayer.min.js" type="text/javascript"></script>
+<script src="/audio/add-on/jplayer.playlist.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var myPlaylist = new jPlayerPlaylist({
+            jPlayer: "#jquery_jplayer_1",
+            cssSelectorAncestor: "#jp_container_1"
+        }, [
+            {{#tracks}}
+            {
+                "title": "{{title}}",
+                "artist": "{{artist}}",
+                "mp3": "{{&mp3}}",
+                "ogg": "{{&ogg}}"
+            }{{^last}},{{/last}}
+            {{/tracks}}
+        ], {
+            playlistOptions: {
+                enableRemoveControls: false
+            },
+            swfPath: "/audio",
+            supplied: "mp3, ogg",
+            smoothPlayBar: true,
+            keyEnabled: true
+        });
+    });
+</script>
