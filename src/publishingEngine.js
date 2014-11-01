@@ -37,11 +37,11 @@ function renderPage(website, path) {
 function renderLevel(website, folder) {
     console.log("Rendering: " + folder);
     var pageData = renderPage(website, folder),
-        childPages = file.getChildPages(website, folder);
-    
+        childFolders = file.getPageChildFolders(website, folder);
+
     file.writePage(website, folder, "index.shtml", pageData);
-    
-    childPages.forEach(function (child) {
+
+    childFolders.forEach(function (child) {
         renderLevel(website, folder + "/" + child);
     });
 }
@@ -49,6 +49,7 @@ function renderLevel(website, folder) {
 exports.renderWebsite = function (website) {
     file.cleanPublishFolder(website);
     renderLevel(website, "");
+    file.copyStaticContent(website);
 };
 
 exports.renderPage = function (website, path) {

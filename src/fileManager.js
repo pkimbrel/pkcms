@@ -3,7 +3,7 @@
 
 "use strict";
 
-var fs = require("fs");
+var fs = require("fs-extra");
 var S = require('string');
 
 var FOLDER_ROOT = __dirname + "/..";
@@ -22,7 +22,7 @@ exports.getWebsites = function () {
     return returnValue;
 };
 
-exports.getChildPages = function (website, path) {
+exports.getPageChildFolders = function (website, path) {
     var folders = fs.readdirSync(WEBSITE_ROOT + "/" + website + "/03-pages" + path),
         returnValue = [];
     folders.forEach(function (folder) {
@@ -33,6 +33,15 @@ exports.getChildPages = function (website, path) {
         }
     });
     return returnValue;
+};
+
+exports.copyStaticContent = function (website) {
+    var src = WEBSITE_ROOT + "/" + website + "/04-static",
+        dest = PUB_ROOT + "/" + website; 
+    
+    fs.copySync(src, dest);
+    
+    return
 };
 
 exports.getComponent = function (website, path) {
@@ -80,11 +89,7 @@ exports.writePage = function (website, path, fileName, fileData) {
 
 exports.cleanPublishFolder = function (website) {
     var path = PUB_ROOT + "/" + website;
-    if (fs.existsSync(path)) {
-        fs.rmdirSync(PUB_ROOT + "/" + website);
-    }
-    if (!fs.existsSync(PUB_ROOT)) {
-        fs.mkdirSync(PUB_ROOT, "0755");
-    }
-    fs.mkdirSync(PUB_ROOT + "/" + website, "0755");
+
+    fs.removeSync(PUB_ROOT + "/" + website);
+    fs.mkdirsSync(PUB_ROOT + "/" + website, "0755");
 };
