@@ -1,0 +1,26 @@
+{
+    "template": "/content/articles",
+    "model": {
+        "articles": [
+            {
+                "title": "My Photos",
+                "paragraphs": [
+                    "Instagram is fantastic. Here we have a tool that really connects people through photography in a way that no other site has. Sure, they weren't the first photo-sharing platform. However, the other are all about \"how to store the photo\". Instagram is about how to SHARE the photo. Unless you're a professional photographer that needs to control access to your photos, have multiple photo sizes, show the photo shoot details to the Nth degree, then chances are you don't need anything more than what Instagram provides.",
+                    "However, there's one problem. Instagram pushes a common theme found amongst other social media products - a \"here and now\" mentality. Photos have a few nanoseconds to capture your attention. And over time, the relevance of a photo diminishes as it falls farther down the timeline.",
+                    "And dang it - I've taken some darn good photos out there. I want the world to see them. So rather than reposting them on Instagram again (which I may still do), here are some of my Instagram photos that I'm particularly proud to show."
+                ]
+            },
+            {
+                "title": "Fall Photos",
+                "date": "2014-10-21",
+                "paragraphs": [
+                    "The first image here was one of my first Instagram photos - taken on Oct 28, 2010. Fall is a time when Instagram really shines. The filters have always brought out the best of Fall - its colors. The first photo here was taken on my first iPhone, too - the iPhone 3s. The iPhone cameras have come a <em>long</em> way since that picture was taken - but I still love it.",
+"<p class=\"yearBreak\">2010</p>",
+                    
+                    
+                    
+                ]
+            }
+        ]
+    }
+}

@@ -1,10 +1,12 @@
 {
     "model": {
-        "title": "This is the photo page"
+        "title": "Paul Kimbrel - My Photos",
+        "nav-photos": true
     },
     "manifest": {
         "header": "/chrome/header",
-        "main": "/content/blog"
+        "main": "/content/photos",
+        "sidebar": "/sidebars/instagram"
     },
     "template": "/standard"
 }
