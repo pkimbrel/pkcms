@@ -3,6 +3,15 @@
     "model": {
         "articles": [
             {
+                "title": "Publishing Engine",
+                "date": "2014-11-03",
+                "paragraphs": [
+                    "I've managed to coble to together a pretty decent publishing engine.  There's no \"front end\" to this thing, yet.  So I'm having to update things like my blog using a standard text editor.",
+                    "However, the content is going into data files (JSON) rather than raw HTML.  From there, the engine is mashing the JSON data into templates to build the final site.  So that's progress (trust me... it is)",
+                    "Next step is to get a spiffy editor for the JSON files so I don't have to manually edit the site at such a low level."
+                ]
+            },
+            {
                 "title": "A New Site",
                 "date": "2014-10-21",
                 "paragraphs": [

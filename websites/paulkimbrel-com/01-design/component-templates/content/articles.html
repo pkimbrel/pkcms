@@ -9,7 +9,12 @@
         {{/date}}
     </header>
     {{#paragraphs}}
-    <p>{{&.}}</p>
+    {{#cssClass}}
+        <p class="{{cssClass}}">{{&content}}</p>
+    {{/cssClass}}
+    {{^cssClass}}
+        <p>{{&.}}</p>
+    {{/cssClass}}
     {{/paragraphs}}
 </article>
 {{/articles}}
