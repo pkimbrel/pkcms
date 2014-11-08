@@ -6,9 +6,9 @@
 var fs = require("fs-extra");
 var S = require('string');
 
-var FOLDER_ROOT = __dirname + "/..";
+var FOLDER_ROOT = __dirname + "/../..";
 var WEBSITE_ROOT = FOLDER_ROOT + "/websites";
-var PUB_ROOT = FOLDER_ROOT + "/pub";
+var PUB_ROOT = FOLDER_ROOT + "/staging";
 
 exports.getWebsites = function () {
     var websites = fs.readdirSync(WEBSITE_ROOT),
