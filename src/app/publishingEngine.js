@@ -15,7 +15,7 @@ function renderComponent(website, path, pageModel) {
     return mustache.render(componentTemplate, model);
 }
 
-function renderPage(website, path) {
+function renderPage(website, path, root) {
     var page = file.getPage(website, path),
         pageTemplate = file.getPageTemplate(website, page.template),
         key,
@@ -23,6 +23,7 @@ function renderPage(website, path) {
         finalMarkup = "",
         pageModel = page.model;
 
+    page.model.root = root;
     page.model.year = new Date().getFullYear();
     page.model.formatDateHuman = function () {
         return function (text, render) {
@@ -42,21 +43,21 @@ function renderPage(website, path) {
     return finalMarkup;
 }
 
-function renderLevel(website, folder) {
+function renderLevel(website, folder, root) {
     console.log("Rendering: " + folder);
-    var pageData = renderPage(website, folder),
+    var pageData = renderPage(website, folder, root),
         childFolders = file.getPageChildFolders(website, folder);
 
-    file.writePage(website, folder, "index.shtml", pageData);
+    file.writePage(website, folder, "index.html", pageData);
 
     childFolders.forEach(function (child) {
-        renderLevel(website, folder + "/" + child);
+        renderLevel(website, folder + "/" + child, root);
     });
 }
 
-exports.renderWebsite = function (website) {
+exports.renderWebsite = function (website, root) {
     file.cleanPublishFolder(website);
-    renderLevel(website, "");
+    renderLevel(website, "", root);
     file.copyStaticContent(website);
 };
 
